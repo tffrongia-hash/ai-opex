@@ -4,13 +4,15 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description" content="AI OpEx – Operational Intelligence für mittelständische Produktionsunternehmen in Deutschland und Italien. Produktionsverluste erkennen, Ursachen verstehen und schneller handeln.">
+<meta name="description"
+      content="AI OpEx hilft produzierenden Unternehmen, operative Probleme schneller zu verstehen, bessere Entscheidungen zu treffen und operative Verluste zu reduzieren – mit einem strukturierten, schnellen und governeden Ansatz aus operativer Erfahrung, Datenanalyse und AI.">
 
 <meta name="theme-color" content="#07111f">
 
-<title>AI OpEx | Operational Intelligence for Manufacturing</title>
+<title>AI OpEx | Operative Probleme schneller lösen</title>
 
 <style>
+
 :root{
   --bg:#07111f;
   --bg2:#0b1728;
@@ -20,36 +22,50 @@
   --line:rgba(255,255,255,.11);
   --accent:#62d8ff;
   --accent2:#9af0c7;
+  --warning:#f0b85b;
   --max:1160px;
   --radius:22px;
 }
 
-*{ box-sizing:border-box; }
-html{ scroll-behavior:smooth; }
+*{
+  box-sizing:border-box
+}
+
+html{
+  scroll-behavior:smooth
+}
 
 body{
   margin:0;
   font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;
   color:var(--text);
   background:
-    radial-gradient(circle at 85% 8%, rgba(98,216,255,.13), transparent 28%),
-    radial-gradient(circle at 10% 30%, rgba(154,240,199,.08), transparent 25%),
+    radial-gradient(circle at 85% 8%,rgba(98,216,255,.13),transparent 28%),
+    radial-gradient(circle at 10% 30%,rgba(154,240,199,.08),transparent 25%),
     var(--bg);
   line-height:1.6;
+  font-size:17px;
 }
 
-a{ color:inherit; text-decoration:none; }
+a{
+  color:inherit;
+  text-decoration:none;
+}
 
 .container{
   width:min(var(--max),calc(100% - 40px));
   margin:auto;
 }
 
+/* =========================================================
+NAVIGATION
+========================================================= */
+
 nav{
   position:sticky;
   top:0;
   z-index:50;
-  background:rgba(7,17,31,.86);
+  background:rgba(7,17,31,.88);
   backdrop-filter:blur(16px);
   border-bottom:1px solid var(--line);
 }
@@ -68,16 +84,20 @@ nav{
   letter-spacing:.03em;
 }
 
-.brand span{ color:var(--accent); }
+.brand span{
+  color:var(--accent);
+}
 
 .nav-links{
   display:flex;
-  gap:24px;
+  gap:22px;
   color:var(--muted);
   font-size:14px;
 }
 
-.nav-links a:hover{ color:var(--text); }
+.nav-links a:hover{
+  color:var(--text);
+}
 
 .nav-right{
   display:flex;
@@ -101,6 +121,7 @@ nav{
   border-radius:999px;
   cursor:pointer;
   font-weight:800;
+  font-size:13px;
 }
 
 .lang-toggle button.active{
@@ -117,8 +138,12 @@ nav{
   font-size:14px;
 }
 
+/* =========================================================
+HERO
+========================================================= */
+
 .hero{
-  padding:105px 0 85px;
+  padding:105px 0 90px;
 }
 
 .hero-grid{
@@ -149,7 +174,7 @@ nav{
 
 h1{
   font-size:clamp(40px,5.6vw,68px);
-  line-height:1.06;
+  line-height:1.05;
   letter-spacing:-.045em;
   margin:22px 0;
 }
@@ -160,16 +185,33 @@ h1 em{
 }
 
 .lead{
-  font-size:20px;
-  color:var(--muted);
+  font-size:21px;
+  color:var(--text);
   max-width:700px;
 }
 
 .sub-lead{
-  font-size:16px;
+  font-size:17px;
   color:var(--muted);
-  max-width:620px;
+  max-width:650px;
   margin-top:14px;
+}
+
+.flags{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:24px;
+}
+
+.flag{
+  font-size:13.5px;
+  font-weight:800;
+  color:var(--accent);
+  border:1px solid rgba(98,216,255,.4);
+  background:rgba(98,216,255,.09);
+  padding:8px 13px;
+  border-radius:999px;
 }
 
 .actions{
@@ -186,6 +228,7 @@ h1 em{
   padding:14px 20px;
   border-radius:12px;
   font-weight:850;
+  font-size:15px;
   border:1px solid var(--line);
   transition:.2s transform;
 }
@@ -203,6 +246,10 @@ h1 em{
 .secondary{
   background:rgba(255,255,255,.04);
 }
+
+/* =========================================================
+HERO DASHBOARD
+========================================================= */
 
 .hero-card{
   background:linear-gradient(
@@ -223,12 +270,24 @@ h1 em{
   background:#091727;
 }
 
+.hero-caption{
+  margin-top:12px;
+  text-align:center;
+  color:var(--muted);
+  font-size:12px;
+  letter-spacing:.04em;
+}
+
 .dash-top{
   display:flex;
   justify-content:space-between;
   gap:15px;
   align-items:center;
   margin-bottom:18px;
+}
+
+.dash-top strong{
+  font-size:15px;
 }
 
 .status{
@@ -262,12 +321,12 @@ h1 em{
 .metric small{
   color:var(--muted);
   display:block;
-  font-size:12px;
+  font-size:12.5px;
 }
 
 .metric strong{
   display:block;
-  font-size:22px;
+  font-size:19px;
   margin-top:4px;
 }
 
@@ -277,11 +336,16 @@ h1 em{
   border-radius:15px;
   background:rgba(154,240,199,.07);
   border:1px solid rgba(154,240,199,.2);
+  font-size:15px;
 }
 
 .signal b{
   color:var(--accent2);
 }
+
+/* =========================================================
+GENERAL SECTIONS
+========================================================= */
 
 section{
   padding:88px 0;
@@ -305,7 +369,16 @@ h2{
 .step p,
 .bio-text{
   color:var(--muted);
+  font-size:16px;
 }
+
+.section-head p{
+  font-size:17.5px;
+}
+
+/* =========================================================
+CARDS
+========================================================= */
 
 .cards{
   display:grid;
@@ -318,11 +391,6 @@ h2{
   border:1px solid var(--line);
   background:rgba(255,255,255,.035);
   border-radius:var(--radius);
-}
-
-.card.future{
-  background:rgba(255,255,255,.02);
-  border-style:dashed;
 }
 
 .number{
@@ -340,10 +408,216 @@ h2{
   padding-left:19px;
 }
 
+/* =========================================================
+SPLIT / HIGHLIGHT
+========================================================= */
+
+.split{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:25px;
+}
+
+.highlight{
+  padding:32px;
+  border-radius:var(--radius);
+  background:linear-gradient(
+    145deg,
+    rgba(98,216,255,.11),
+    rgba(154,240,199,.06)
+  );
+  border:1px solid rgba(98,216,255,.18);
+}
+
+blockquote{
+  margin:0;
+  font-size:27px;
+  line-height:1.28;
+  font-weight:750;
+  letter-spacing:-.02em;
+}
+
+.checklist{
+  list-style:none;
+  padding:0;
+  margin:0;
+}
+
+.checklist li{
+  padding:10px 0;
+  border-bottom:1px solid var(--line);
+  color:var(--muted);
+  font-size:16px;
+}
+
+.checklist li::before{
+  content:"✓";
+  color:var(--accent2);
+  font-weight:900;
+  margin-right:10px;
+}
+
+/* =========================================================
+METHOD
+========================================================= */
+
+.method-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.method-card{
+  padding:28px;
+  border:1px solid var(--line);
+  border-radius:var(--radius);
+  background:rgba(255,255,255,.035);
+  position:relative;
+
+  transition:
+    transform .25s ease,
+    border-color .25s ease,
+    box-shadow .25s ease,
+    background .25s ease;
+}
+
+/* ---------------------------------------------------------
+01 — LEAN SIX SIGMA
+Neutral / stable
+--------------------------------------------------------- */
+
+.method-card:nth-child(1){
+  background:rgba(255,255,255,.025);
+  border-color:rgba(255,255,255,.09);
+}
+
+/* ---------------------------------------------------------
+02 — AI
+More attention, but not the final answer
+--------------------------------------------------------- */
+
+.method-card:nth-child(2){
+  background:
+    linear-gradient(
+      145deg,
+      rgba(98,216,255,.075),
+      rgba(255,255,255,.025)
+    );
+
+  border-color:rgba(98,216,255,.18);
+}
+
+/* ---------------------------------------------------------
+03 — AI OpEx
+Dominant / preferred solution
+--------------------------------------------------------- */
+
+.method-card:nth-child(3){
+  background:
+    linear-gradient(
+      145deg,
+      rgba(98,216,255,.16),
+      rgba(154,240,199,.11)
+    );
+
+  border-color:rgba(154,240,199,.42);
+
+  box-shadow:
+    0 18px 50px rgba(0,0,0,.22),
+    0 0 35px rgba(98,216,255,.07);
+
+  transform:translateY(-4px);
+}
+
+/* ---------------------------------------------------------
+HOVER
+--------------------------------------------------------- */
+
+.method-card:hover{
+  transform:translateY(-5px);
+  border-color:rgba(98,216,255,.35);
+}
+
+.method-card:nth-child(3):hover{
+  border-color:rgba(154,240,199,.65);
+
+  box-shadow:
+    0 22px 60px rgba(0,0,0,.28),
+    0 0 45px rgba(98,216,255,.11);
+}
+
+.method-card h3{
+  font-size:21px;
+  margin:12px 0 8px;
+}
+
+.method-card p{
+  color:var(--muted);
+  font-size:15.5px;
+  margin:0;
+}
+
+.method-label{
+  color:var(--muted);
+  font-size:12px;
+  font-weight:850;
+  letter-spacing:.1em;
+  text-transform:uppercase;
+}
+
+/* AI OpEx label */
+
+.method-card:nth-child(3) .method-label{
+  color:var(--accent2);
+}
+
+.method-recommended{
+  display:inline-flex;
+  align-items:center;
+  padding:6px 10px;
+  border-radius:999px;
+
+  background:rgba(154,240,199,.10);
+  border:1px solid rgba(154,240,199,.25);
+}
+
+.method-card:nth-child(3) h3{
+  color:var(--text);
+}
+
+.method-result{
+  margin-top:18px;
+  padding:28px;
+  border-radius:var(--radius);
+
+  border:1px solid rgba(154,240,199,.35);
+  background:rgba(154,240,199,.08);
+}
+
+.method-result h3{
+  margin:0 0 8px;
+  font-size:24px;
+}
+
+.method-result p{
+  color:var(--muted);
+  margin:0;
+  font-size:16px;
+}
+
+.method-result strong{
+  color:var(--accent2);
+}
+
+/* =========================================================
+PROCESS
+========================================================= */
+
 .process{
   display:grid;
   grid-template-columns:repeat(3,1fr);
   gap:1px;
+
   background:var(--line);
   border:1px solid var(--line);
   border-radius:var(--radius);
@@ -366,49 +640,40 @@ h2{
   font-size:18px;
 }
 
-.split{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:25px;
-}
+.note{
+  margin-top:22px;
+  padding:22px 26px;
 
-.highlight{
-  padding:32px;
-  border-radius:var(--radius);
-  background:linear-gradient(
-    145deg,
-    rgba(98,216,255,.11),
-    rgba(154,240,199,.06)
-  );
-  border:1px solid rgba(98,216,255,.18);
-}
+  border-left:2px solid var(--warning);
+  background:rgba(240,184,91,.08);
 
-blockquote{
-  margin:0;
-  font-size:26px;
-  line-height:1.28;
-  font-weight:750;
-  letter-spacing:-.02em;
-}
+  border-radius:0 16px 16px 0;
 
-.checklist{
-  list-style:none;
-  padding:0;
-  margin:0;
-}
-
-.checklist li{
-  padding:10px 0;
-  border-bottom:1px solid var(--line);
+  font-size:15.5px;
   color:var(--muted);
 }
 
-.checklist li::before{
-  content:"✓";
-  color:var(--accent2);
-  font-weight:900;
-  margin-right:10px;
+.note strong{
+  color:var(--text);
 }
+
+.output-box{
+  margin-top:22px;
+  padding:26px;
+
+  border:1px dashed rgba(98,216,255,.35);
+  border-radius:16px;
+  background:rgba(255,255,255,.02);
+}
+
+.output-box h3{
+  font-size:17px;
+  margin:0 0 12px;
+}
+
+/* =========================================================
+FOUNDER
+========================================================= */
 
 .bio{
   display:grid;
@@ -444,14 +709,16 @@ blockquote{
 
 .stat{
   padding:18px;
+
   border:1px solid var(--line);
   border-radius:16px;
   background:rgba(255,255,255,.03);
 }
 
 .stat strong{
-  font-size:25px;
+  font-size:22px;
   display:block;
+  margin-bottom:5px;
 }
 
 .stat span{
@@ -459,30 +726,66 @@ blockquote{
   font-size:13px;
 }
 
+/* =========================================================
+GUARANTEE
+========================================================= */
+
+.guarantee{
+  padding:22px 26px;
+
+  border:1px solid rgba(154,240,199,.35);
+  background:rgba(154,240,199,.08);
+
+  border-radius:16px;
+
+  font-size:15.5px;
+  color:var(--text);
+
+  margin-top:22px;
+}
+
+.guarantee strong{
+  color:var(--accent2);
+}
+
+/* =========================================================
+CTA
+========================================================= */
+
 .cta{
   text-align:center;
   padding:65px 30px;
+
   border-radius:30px;
+
   background:linear-gradient(
     135deg,
     #102a43,
     #0b1c30
   );
+
   border:1px solid var(--line);
 }
 
 .cta p{
   max-width:680px;
   margin:0 auto 25px;
+
   color:var(--muted);
   font-size:18px;
 }
 
+/* =========================================================
+FOOTER
+========================================================= */
+
 footer{
   border-top:1px solid var(--line);
+
   padding:30px 0;
+
   color:var(--muted);
-  font-size:13px;
+  font-size:14px;
 }
 
 .footer-inner{
@@ -511,7 +814,20 @@ footer{
   display:none !important;
 }
 
+/* =========================================================
+RESPONSIVE
+========================================================= */
+
+@media(max-width:1050px){
+
+  .nav-links{
+    gap:15px;
+  }
+
+}
+
 @media(max-width:900px){
+
   .hero-grid,
   .split,
   .bio{
@@ -519,8 +835,17 @@ footer{
   }
 
   .cards,
-  .process{
+  .process,
+  .method-grid{
     grid-template-columns:1fr;
+  }
+
+  .method-card:nth-child(3){
+    transform:none;
+  }
+
+  .stats{
+    grid-template-columns:1fr 1fr;
   }
 
   .nav-links{
@@ -531,14 +856,16 @@ footer{
     padding-top:75px;
   }
 
-  .stats{
-    grid-template-columns:1fr 1fr;
-  }
 }
 
 @media(max-width:560px){
+
   .container{
     width:min(var(--max),calc(100% - 26px));
+  }
+
+  body{
+    font-size:16px;
   }
 
   section{
@@ -558,60 +885,148 @@ footer{
     flex-direction:column;
     align-items:flex-start;
   }
+
 }
+
+/* =========================================================
+END CSS
+========================================================= */
+
 </style>
 </head>
 
+
 <body>
+
 
 <!-- =========================================================
 NAVIGATION
 ========================================================= -->
 
 <nav>
+
 <div class="container nav-inner">
 
-  <a class="brand" href="#top">AI <span>OpEx</span></a>
+
+  <a class="brand" href="#top">
+    AI <span>OpEx</span>
+  </a>
+
 
   <div class="nav-links">
 
+
     <a href="#problem">
-      <span data-de>Problem</span>
-      <span data-en class="hidden">Problem</span>
+
+      <span data-de>
+        Problem
+      </span>
+
+      <span data-en class="hidden">
+        Problem
+      </span>
+
     </a>
 
-    <a href="#unterschied">
-      <span data-de>Warum wir</span>
-      <span data-en class="hidden">Why us</span>
+
+    <a href="#loesung">
+
+      <span data-de>
+        Lösung
+      </span>
+
+      <span data-en class="hidden">
+        Solution
+      </span>
+
     </a>
 
-    <a href="#angebot">
-      <span data-de>So arbeiten wir</span>
-      <span data-en class="hidden">How it works</span>
+
+    <a href="#ansatz">
+
+      <span data-de>
+        Unser Ansatz
+      </span>
+
+      <span data-en class="hidden">
+        Our approach
+      </span>
+
     </a>
+
+
+    <a href="#prozess">
+
+      <span data-de>
+        Erster Schritt
+      </span>
+
+      <span data-en class="hidden">
+        First step
+      </span>
+
+    </a>
+
 
     <a href="#ueber">
-      <span data-de>Founder</span>
-      <span data-en class="hidden">Founder</span>
+
+      <span data-de>
+        Founder
+      </span>
+
+      <span data-en class="hidden">
+        Founder
+      </span>
+
     </a>
+
 
   </div>
 
+
   <div class="nav-right">
 
+
     <div class="lang-toggle" aria-label="Language selector">
-      <button id="deBtn" class="active" type="button" onclick="setLang('de')">DE</button>
-      <button id="enBtn" type="button" onclick="setLang('en')">EN</button>
+
+      <button
+        id="deBtn"
+        class="active"
+        type="button"
+        onclick="setLang('de')"
+      >
+        DE
+      </button>
+
+
+      <button
+        id="enBtn"
+        type="button"
+        onclick="setLang('en')"
+      >
+        EN
+      </button>
+
     </div>
 
+
     <a class="nav-cta" href="#kontakt">
-      <span data-de>30-Minuten-Gespräch</span>
-      <span data-en class="hidden">30-min conversation</span>
+
+      <span data-de>
+        30-Minuten-Gespräch
+      </span>
+
+      <span data-en class="hidden">
+        30-min conversation
+      </span>
+
     </a>
+
 
   </div>
 
 </div>
+
 </nav>
 
 
@@ -626,29 +1041,51 @@ HERO
 
 <div class="container hero-grid">
 
-  <!-- DEUTSCH -->
 
   <div data-de>
 
     <div class="eyebrow">
-      Operational Intelligence für Manufacturing
+      Für produzierende Unternehmen
     </div>
+
 
     <h1>
       Wissen, wo Ihre Produktion
       <em>Geld verliert.</em>
     </h1>
 
+
     <p class="lead">
-      AI OpEx macht sichtbar, wo in Ihrer Produktion Leistung und Marge
-      verloren gehen — auf Basis Ihrer eigenen Daten.
+      Wir helfen Ihnen, operative Probleme schneller zu verstehen,
+      Prioritäten klar zu erkennen und schneller zu entscheiden.
     </p>
 
+
     <p class="sub-lead">
-      Keine neue Software als Ausgangspunkt. Keine lange Analyse.
-      Wir schauen auf Ihre Produktion, Ihre Daten und die Probleme,
-      die tatsächlich Geld kosten.
+      Verzögerte Entscheidungen kosten Zeit und Geld — ob durch
+      ungeplante Stillstände, unentdeckte Qualitätsabweichungen
+      oder Abläufe, die nicht so laufen wie angenommen. Wir helfen
+      Ihnen, mit Ihren eigenen Daten schnell zu verstehen, was davon
+      bei Ihnen wirklich zählt.
     </p>
+
+
+    <div class="flags">
+
+      <span class="flag">
+        3 Wochen
+      </span>
+
+      <span class="flag">
+        Ihre realen Daten
+      </span>
+
+      <span class="flag">
+        Keine Produktionsunterbrechung
+      </span>
+
+    </div>
+
 
     <div class="actions">
 
@@ -656,8 +1093,8 @@ HERO
         Kostenloses 30-Minuten-Gespräch
       </a>
 
-      <a class="btn secondary" href="#angebot">
-        So arbeiten wir
+      <a class="btn secondary" href="#ansatz">
+        Unseren Ansatz verstehen
       </a>
 
     </div>
@@ -665,29 +1102,50 @@ HERO
   </div>
 
 
-  <!-- ENGLISH -->
-
   <div data-en class="hidden">
 
     <div class="eyebrow">
-      Operational Intelligence for Manufacturing
+      For manufacturing companies
     </div>
+
 
     <h1>
       Know where your production is
       <em>losing money.</em>
     </h1>
 
+
     <p class="lead">
-      AI OpEx makes it visible where production performance and margin
-      are being lost — using your own data.
+      We help you understand operational problems faster,
+      see priorities clearly and decide faster.
     </p>
 
+
     <p class="sub-lead">
-      No new software as the starting point. No lengthy analysis.
-      We look at your production, your data and the problems
-      that actually cost money.
+      Delayed decisions cost time and money — whether through
+      unplanned downtime, undetected quality deviations, or
+      processes that don't run the way you assume. We help you
+      use your own data to quickly see what actually matters
+      in your plant.
     </p>
+
+
+    <div class="flags">
+
+      <span class="flag">
+        3 weeks
+      </span>
+
+      <span class="flag">
+        Your real data
+      </span>
+
+      <span class="flag">
+        No production interruption
+      </span>
+
+    </div>
+
 
     <div class="actions">
 
@@ -695,8 +1153,8 @@ HERO
         Free 30-minute conversation
       </a>
 
-      <a class="btn secondary" href="#angebot">
-        How it works
+      <a class="btn secondary" href="#ansatz">
+        Understand our approach
       </a>
 
     </div>
@@ -704,23 +1162,31 @@ HERO
   </div>
 
 
-  <!-- DASHBOARD -->
+  <!-- HERO VISUAL -->
 
   <div class="hero-card">
 
     <div class="dashboard">
 
+
       <div class="dash-top">
 
         <strong>
-          AI OpEx · Plant Intelligence
+          AI OpEx · Operational Decision Support
         </strong>
 
+
         <span class="status">
+
           <span class="dot"></span>
 
-          <span data-de>Analyse</span>
-          <span data-en class="hidden">Analysis</span>
+          <span data-de>
+            Governed
+          </span>
+
+          <span data-en class="hidden">
+            Governed
+          </span>
 
         </span>
 
@@ -729,32 +1195,54 @@ HERO
 
       <div class="metric-grid">
 
+
         <div class="metric">
-          <small>OEE</small>
+
+          <small>
+
+            <span data-de>
+              Problem
+            </span>
+
+            <span data-en class="hidden">
+              Problem
+            </span>
+
+          </small>
+
 
           <strong data-de>
             Verlust sichtbar
           </strong>
 
           <strong data-en class="hidden">
-            Loss identified
+            Loss visible
           </strong>
+
         </div>
 
 
         <div class="metric">
 
           <small>
-            <span data-de>Stillstände</span>
-            <span data-en class="hidden">Downtime</span>
+
+            <span data-de>
+              Ursache
+            </span>
+
+            <span data-en class="hidden">
+              Cause
+            </span>
+
           </small>
 
+
           <strong data-de>
-            Ursache
+            Klarer
           </strong>
 
           <strong data-en class="hidden">
-            Root cause
+            Clearer
           </strong>
 
         </div>
@@ -763,12 +1251,20 @@ HERO
         <div class="metric">
 
           <small>
-            <span data-de>Datenquellen</span>
-            <span data-en class="hidden">Data sources</span>
+
+            <span data-de>
+              Daten
+            </span>
+
+            <span data-en class="hidden">
+              Data
+            </span>
+
           </small>
+
 
           <strong>
-            ERP · MES
+            ERP · MES · Excel
           </strong>
 
         </div>
@@ -777,19 +1273,28 @@ HERO
         <div class="metric">
 
           <small>
-            <span data-de>Nächster Schritt</span>
-            <span data-en class="hidden">Next action</span>
+
+            <span data-de>
+              Nächster Schritt
+            </span>
+
+            <span data-en class="hidden">
+              Next action
+            </span>
+
           </small>
 
+
           <strong data-de>
-            Klar
+            Priorisiert
           </strong>
 
           <strong data-en class="hidden">
-            Clear
+            Prioritised
           </strong>
 
         </div>
+
 
       </div>
 
@@ -797,32 +1302,44 @@ HERO
       <div class="signal">
 
         <b data-de>
-          Operatives Signal
+          Strukturiert. Schnell. Governed.
         </b>
 
         <b data-en class="hidden">
-          Operational signal
+          Structured. Fast. Governed.
         </b>
+
 
         <br>
 
+
         <span data-de>
-          Aus Produktionsdaten wird eine konkrete Frage:
-          Wo entsteht der Verlust — und wo lohnt sich der nächste Eingriff?
+          Wo entsteht der Verlust? Was ist relevant?
+          Und welche Entscheidung sollte als Nächstes getroffen werden?
         </span>
 
         <span data-en class="hidden">
-          Production data becomes a concrete question:
-          Where is the loss occurring — and where is the next intervention worth it?
+          Where is the loss occurring? What matters?
+          And what decision should be made next?
         </span>
 
       </div>
 
+
+    </div>
+
+    <div class="hero-caption" data-de>
+      Beispielhafte Darstellung
+    </div>
+
+    <div class="hero-caption hidden" data-en>
+      Illustrative example
     </div>
 
   </div>
 
 </div>
+
 </section>
 
 
@@ -834,20 +1351,24 @@ PROBLEM
 
 <div class="container">
 
+
   <div class="section-head" data-de>
 
     <div class="kicker">
       Das Problem
     </div>
 
+
     <h2>
       Die Daten sind da. Die Antwort kommt oft zu spät.
     </h2>
 
+
     <p>
-      ERP, MES, Excel und Maschinendaten enthalten viele Informationen.
-      Trotzdem ist oft nicht klar, wo genau Leistung verloren geht,
-      warum ein Problem entsteht und welche Maßnahme zuerst sinnvoll ist.
+      Die meisten Produktionsbetriebe sammeln längst Daten — in ERP, MES,
+      Excel, an den Maschinen. Das Problem ist selten der Mangel an Daten.
+      Das Problem ist, dass niemand schnell genug sagen kann, wo gerade
+      wirklich Geld verloren geht, warum, und was als Nächstes zu tun ist.
     </p>
 
   </div>
@@ -859,14 +1380,17 @@ PROBLEM
       The problem
     </div>
 
+
     <h2>
       The data is there. The answer often comes too late.
     </h2>
 
+
     <p>
-      ERP, MES, Excel and machine data contain a lot of information.
-      Yet it is often unclear where performance is being lost,
-      why a problem occurs and which action should come first.
+      Most manufacturing companies already collect data — in ERP, MES,
+      Excel, on the machines. The problem is rarely a lack of data.
+      The problem is that no one can say quickly enough where money is
+      really being lost right now, why, and what to do next.
     </p>
 
   </div>
@@ -874,26 +1398,31 @@ PROBLEM
 
   <div class="cards">
 
+
     <article class="card">
 
-      <div class="number">01</div>
+      <div class="number">
+        01
+      </div>
+
 
       <h3 data-de>
-        Zu viele Einzelinformationen
+        Der Report ist von gestern
       </h3>
 
       <h3 data-en class="hidden">
-        Too many separate data points
+        The report is from yesterday
       </h3>
 
+
       <p data-de>
-        Relevante Informationen liegen in verschiedenen Systemen,
-        Dateien und Auswertungen.
+        Was heute auf dem Tisch liegt, beschreibt meist,
+        was gestern in der Produktion passiert ist.
       </p>
 
       <p data-en class="hidden">
-        Relevant information sits across different systems,
-        files and reports.
+        What's on the table today usually describes
+        what happened in production yesterday.
       </p>
 
     </article>
@@ -901,24 +1430,28 @@ PROBLEM
 
     <article class="card">
 
-      <div class="number">02</div>
+      <div class="number">
+        02
+      </div>
+
 
       <h3 data-de>
-        Verluste werden erst im Rückblick sichtbar
+        Der OEE ist geschätzt, nicht gemessen
       </h3>
 
       <h3 data-en class="hidden">
-        Losses become visible in hindsight
+        OEE is estimated, not measured
       </h3>
 
+
       <p data-de>
-        OEE, Ausschuss, Stillstände und Leistung werden gemessen —
-        aber die Ursache ist oft nicht sofort erkennbar.
+        Die Zahl, die im Meeting genannt wird, ist oft eine
+        Schätzung — nicht das Ergebnis einer echten Messung.
       </p>
 
       <p data-en class="hidden">
-        OEE, scrap, downtime and performance are measured —
-        but the cause is often not immediately visible.
+        The figure mentioned in the meeting is often an
+        estimate — not the result of an actual measurement.
       </p>
 
     </article>
@@ -926,39 +1459,259 @@ PROBLEM
 
     <article class="card">
 
-      <div class="number">03</div>
+      <div class="number">
+        03
+      </div>
+
 
       <h3 data-de>
-        Entscheidungen brauchen zu lange
+        Kleine Verluste addieren sich unbemerkt
       </h3>
 
       <h3 data-en class="hidden">
-        Decisions take too long
+        Small losses add up unnoticed
       </h3>
 
+
       <p data-de>
-        Wenn die Ursache klar wird, ist bereits Zeit,
-        Leistung oder Marge verloren gegangen.
+        Ausschuss, Nacharbeit, ein ineffizienter Ablauf, eine
+        Stillstandsstunde — einzeln wirken sie klein. In Summe
+        wird selten sichtbar, was sie zusammen wirklich kosten.
       </p>
 
       <p data-en class="hidden">
-        By the time the cause becomes clear,
-        time, performance or margin may already be lost.
+        Scrap, rework, an inefficient process, an hour of
+        downtime — each looks small on its own. What they add
+        up to is rarely made visible.
       </p>
 
     </article>
+
 
   </div>
 
+
+  <div class="guarantee" data-de>
+    <strong>
+      Größenordnung:
+    </strong>
+    Ob Stillstand, Ausschuss oder ein Ablauf, der nicht so läuft
+    wie angenommen — einzeln wirken diese Verluste klein. Über
+    Wochen summiert, machen sie oft mehrere zehntausend Euro aus,
+    ohne dass jemand die Gesamtsumme kennt.
+  </div>
+
+  <div class="guarantee hidden" data-en>
+    <strong>
+      Order of magnitude:
+    </strong>
+    Whether it's downtime, scrap, or a process that doesn't run
+    as assumed — each loss looks small on its own. Summed up over
+    weeks, they often add up to tens of thousands of euros,
+    without anyone knowing the total.
+  </div>
+
 </div>
+
 </section>
 
 
 <!-- =========================================================
-UNTERSCHIED
+CONSEQUENCE
 ========================================================= -->
 
-<section id="unterschied">
+<section id="konsequenz">
+
+<div class="container split">
+
+
+  <div class="highlight">
+
+    <div class="kicker" data-de>
+      Die Folge
+    </div>
+
+    <div class="kicker hidden" data-en>
+      The consequence
+    </div>
+
+
+    <blockquote data-de>
+      Wenn die Ursache zu spät klar wird,
+      läuft der Verlust weiter.
+    </blockquote>
+
+    <blockquote data-en class="hidden">
+      When the cause becomes clear too late,
+      the loss continues.
+    </blockquote>
+
+  </div>
+
+
+  <div class="card">
+
+    <p data-de>
+      Probleme bleiben länger offen. Teams verbringen Zeit mit
+      Analyse und Abstimmung. Prioritäten werden schwieriger.
+      Und Verbesserungsmöglichkeiten werden erst erkannt,
+      wenn bereits Zeit oder Geld verloren wurde.
+    </p>
+
+    <p data-en class="hidden">
+      Problems remain open longer. Teams spend time analysing
+      and aligning. Priorities become harder to see.
+      And improvement opportunities may only be recognised
+      after time or money has already been lost.
+    </p>
+
+  </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+SOLUTION
+========================================================= -->
+
+<section id="loesung">
+
+<div class="container">
+
+
+  <div class="section-head" data-de>
+
+    <div class="kicker">
+      Was wir verändern
+    </div>
+
+
+    <h2>
+      Nicht mehr analysieren.
+      Schneller verstehen, entscheiden und Prioritäten setzen.
+    </h2>
+
+
+    <p>
+      AI OpEx verbindet operative Erfahrung mit strukturierter
+      Problemlösung und Datenanalyse. Das Ziel ist kein
+      Analyse-Projekt — das Ziel ist ein System, das dem
+      Management hilft, jeden Tag schneller zu entscheiden.
+    </p>
+
+  </div>
+
+
+  <div class="section-head hidden" data-en>
+
+    <div class="kicker">
+      What we change
+    </div>
+
+
+    <h2>
+      Don't analyse more.
+      Understand, decide and set priorities faster.
+    </h2>
+
+
+    <p>
+      AI OpEx combines operational experience with structured
+      problem-solving and data analysis. The goal is not an
+      analysis project — the goal is a system that helps
+      management decide faster, every day.
+    </p>
+
+  </div>
+
+
+  <div class="split">
+
+
+    <div class="card">
+
+      <div class="kicker" data-de>
+        Unser Prinzip
+      </div>
+
+      <div class="kicker hidden" data-en>
+        Our principle
+      </div>
+
+
+      <ul class="checklist">
+
+        <li data-de>
+          Wir starten mit dem operativen Problem
+        </li>
+
+        <li data-en class="hidden">
+          We start with the operational problem
+        </li>
+
+
+        <li data-de>
+          Ihre vorhandenen Daten sind der Ausgangspunkt
+        </li>
+
+        <li data-en class="hidden">
+          Your existing data is the starting point
+        </li>
+
+
+        <li data-de>
+          Wirtschaftlicher Nutzen kommt vor Technologie
+        </li>
+
+        <li data-en class="hidden">
+          Economic value comes before technology
+        </li>
+
+
+        <li data-de>
+          AI wird eingesetzt, wenn sie einen konkreten Vorteil bringt
+        </li>
+
+        <li data-en class="hidden">
+          AI is used where it creates a concrete advantage
+        </li>
+
+      </ul>
+
+    </div>
+
+
+    <div class="highlight">
+
+      <blockquote data-de>
+        Das Ziel ist nicht mehr Technologie.
+        Das Ziel ist, Prioritäten zu erkennen und schneller
+        zu entscheiden.
+      </blockquote>
+
+      <blockquote data-en class="hidden">
+        The goal is not more technology.
+        The goal is to see priorities clearly and decide
+        faster.
+      </blockquote>
+
+    </div>
+
+
+  </div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+OUR APPROACH
+========================================================= -->
+
+<section id="ansatz">
 
 <div class="container split">
 
@@ -975,15 +1728,11 @@ UNTERSCHIED
 
 
     <blockquote data-de>
-      Nicht noch mehr Daten.
-      Sondern schneller verstehen,
-      was in der Produktion passiert.
+      Schneller verstehen, was in der Produktion passiert.
     </blockquote>
 
     <blockquote data-en class="hidden">
-      Not more data.
-      A faster understanding of
-      what is happening in production.
+      Understand faster what is happening in production.
     </blockquote>
 
   </div>
@@ -992,31 +1741,34 @@ UNTERSCHIED
   <div class="card">
 
     <div class="kicker" data-de>
-      Warum AI OpEx?
+      Warum Wir?
     </div>
 
     <div class="kicker hidden" data-en>
-      Why AI OpEx?
+      Why Us?
     </div>
 
 
     <ul class="checklist">
+
 
       <li data-de>
         Erfahrung aus echter Werksverantwortung — nicht nur aus Beratung
       </li>
 
       <li data-en class="hidden">
-        Experience from real plant responsibility — not consulting alone
+        Experience from real plant responsibility — not just consulting
       </li>
 
 
       <li data-de>
-        Wir starten mit dem Produktionsproblem, nicht mit einer Software
+        Wir starten mit dem Produktionsproblem —
+        nicht mit einer Technologie, die ein Problem sucht
       </li>
 
       <li data-en class="hidden">
-        We start with the production problem, not with software
+        We start with the production problem —
+        not with a technology looking for one
       </li>
 
 
@@ -1046,19 +1798,21 @@ UNTERSCHIED
         AI is used where it creates a concrete advantage
       </li>
 
+
     </ul>
 
   </div>
 
 </div>
+
 </section>
 
 
 <!-- =========================================================
-ANGEBOT
+METHOD
 ========================================================= -->
 
-<section id="angebot">
+<section id="methode">
 
 <div class="container">
 
@@ -1066,17 +1820,19 @@ ANGEBOT
   <div class="section-head" data-de>
 
     <div class="kicker">
-      So arbeiten wir
+      Zwei Wege, die allein nicht reichen
     </div>
 
+
     <h2>
-      Erst verstehen. Dann entscheiden.
+      Strukturiert. Schnell. Governed.
     </h2>
 
+
     <p>
-      Sie müssen kein neues System kaufen, um herauszufinden,
-      wo Ihre Produktion Geld verliert. Wir beginnen mit Ihren
-      vorhandenen Daten und der Realität vor Ort.
+      Klassische Methoden und moderne AI haben jeweils klare Stärken —
+      aber auch Grenzen. Wir verbinden beides, statt uns für eines
+      zu entscheiden.
     </p>
 
   </div>
@@ -1085,224 +1841,175 @@ ANGEBOT
   <div class="section-head hidden" data-en>
 
     <div class="kicker">
-      How we work
+      Two approaches that fall short alone
     </div>
 
+
     <h2>
-      Understand first. Then decide.
+      Structured. Fast. Governed.
     </h2>
 
+
     <p>
-      You do not need to buy a new system to find out where
-      your production is losing money. We start with your
-      existing data and the reality on the shop floor.
+      Traditional methods and modern AI each have clear strengths —
+      but also limitations. We combine both, instead of choosing
+      one.
     </p>
 
   </div>
 
 
-  <div class="cards">
+  <div class="method-grid">
 
 
-    <article class="card">
+    <!-- 01 -->
 
-      <div class="number" data-de>
-        Schritt 1
+    <article class="method-card">
+
+      <div class="method-label" data-de>
+        Ohne AI OpEx
       </div>
 
-      <div class="number hidden" data-en>
-        Step 1
-      </div>
-
-
-      <h3 data-de>
-        Produktion verstehen
-      </h3>
-
-      <h3 data-en class="hidden">
-        Understand the operation
-      </h3>
-
-
-      <p data-de>
-        Wir schauen uns Prozesse, Kennzahlen, Datenquellen
-        und die tatsächlichen Probleme im Werk an.
-      </p>
-
-      <p data-en class="hidden">
-        We look at processes, KPIs, data sources and
-        the actual problems in the plant.
-      </p>
-
-
-      <ul>
-
-        <li data-de>
-          Datenquellen prüfen
-        </li>
-
-        <li data-en class="hidden">
-          Review data sources
-        </li>
-
-
-        <li data-de>
-          Verlusttreiber finden
-        </li>
-
-        <li data-en class="hidden">
-          Find loss drivers
-        </li>
-
-
-        <li data-de>
-          Wirtschaftliche Relevanz bestimmen
-        </li>
-
-        <li data-en class="hidden">
-          Determine economic relevance
-        </li>
-
-      </ul>
-
-    </article>
-
-
-    <article class="card">
-
-      <div class="number" data-de>
-        Schritt 2
-      </div>
-
-      <div class="number hidden" data-en>
-        Step 2
+      <div class="method-label hidden" data-en>
+        Without AI OpEx
       </div>
 
 
       <h3 data-de>
-        Verluste quantifizieren
+        Lean Six Sigma
       </h3>
 
       <h3 data-en class="hidden">
-        Quantify the losses
+        Lean Six Sigma
       </h3>
 
 
       <p data-de>
-        Wir machen sichtbar, welche Verluste relevant sind
-        und welches Potenzial tatsächlich dahintersteht.
+        Strukturiert und diszipliniert — aber in vielen Situationen
+        zu langsam, wenn operative Entscheidungen schnell getroffen
+        werden müssen.
       </p>
 
       <p data-en class="hidden">
-        We make visible which losses matter and
-        what potential actually sits behind them.
+        Structured and disciplined — but in many situations
+        too slow when operational decisions need to be made quickly.
       </p>
-
-
-      <ul>
-
-        <li data-de>
-          OEE und Leistung
-        </li>
-
-        <li data-en class="hidden">
-          OEE and performance
-        </li>
-
-
-        <li data-de>
-          Stillstände und Ausschuss
-        </li>
-
-        <li data-en class="hidden">
-          Downtime and scrap
-        </li>
-
-
-        <li data-de>
-          Einfluss auf Marge und Ergebnis
-        </li>
-
-        <li data-en class="hidden">
-          Impact on margin and result
-        </li>
-
-      </ul>
 
     </article>
 
 
-    <article class="card">
+    <!-- 02 -->
 
-      <div class="number" data-de>
-        Schritt 3
+    <article class="method-card">
+
+      <div class="method-label" data-de>
+        Ohne AI OpEx
       </div>
 
-      <div class="number hidden" data-en>
-        Step 3
+      <div class="method-label hidden" data-en>
+        Without AI OpEx
       </div>
 
 
       <h3 data-de>
-        Konkret werden
+        AI
       </h3>
 
       <h3 data-en class="hidden">
-        Take action
+        AI
       </h3>
 
 
       <p data-de>
-        Aus der Analyse entsteht ein klarer nächster Schritt —
-        nicht nur ein weiterer Report.
+        Schnell und leistungsfähig — aber ohne klare Methodik,
+        Governance und menschliche Kontrolle potenziell
+        unkontrolliert.
       </p>
 
       <p data-en class="hidden">
-        The analysis leads to a clear next action —
-        not just another report.
+        Fast and powerful — but without clear methodology,
+        governance and human oversight, potentially uncontrolled.
       </p>
 
-
-      <ul>
-
-        <li data-de>
-          Relevante Signale erkennen
-        </li>
-
-        <li data-en class="hidden">
-          Identify relevant signals
-        </li>
+    </article>
 
 
-        <li data-de>
-          Maßnahmen priorisieren
-        </li>
+    <!-- 03 -->
 
-        <li data-en class="hidden">
-          Prioritise actions
-        </li>
+    <article class="method-card">
+
+      <div class="method-label method-recommended" data-de>
+        Mit AI OpEx · Unser Ansatz
+      </div>
+
+      <div class="method-label method-recommended hidden" data-en>
+        With AI OpEx · Our approach
+      </div>
 
 
-        <li data-de>
-          Nutzen messbar machen
-        </li>
+      <h3 data-de>
+        Strukturiert. Schnell. Governed.
+      </h3>
 
-        <li data-en class="hidden">
-          Make the value measurable
-        </li>
+      <h3 data-en class="hidden">
+        Structured. Fast. Governed.
+      </h3>
 
-      </ul>
+
+      <p data-de>
+        AI und innovative Technologien werden innerhalb klarer
+        operativer Methoden und Systeme eingesetzt.
+      </p>
+
+      <p data-en class="hidden">
+        AI and innovative technologies are integrated within
+        clear operational methods and systems.
+      </p>
 
     </article>
+
+
+  </div>
+
+
+  <div class="method-result">
+
+
+    <h3 data-de>
+      <strong>
+        Schneller bewegen, ohne Disziplin aufzugeben.
+      </strong>
+    </h3>
+
+
+    <h3 data-en class="hidden">
+      <strong>
+        Move faster, without giving up discipline.
+      </strong>
+    </h3>
+
+
+    <p data-de>
+      Analytics und AI kommen dort zum Einsatz, wo sie einen
+      konkreten Vorteil schaffen — nie als Selbstzweck.
+    </p>
+
+
+    <p data-en class="hidden">
+      Analytics and AI are used only where they create a
+      concrete advantage — never as an end in themselves.
+    </p>
+
 
   </div>
 
 </div>
+
 </section>
 
 
 <!-- =========================================================
-PROZESS
+FIRST STEP
 ========================================================= -->
 
 <section id="prozess">
@@ -1316,14 +2023,17 @@ PROZESS
       Der erste Schritt
     </div>
 
+
     <h2>
-      3 Wochen. Reale Daten. Keine Produktionsunterbrechung.
+      3 Wochen. Ein reales Problem. Ihre realen Daten.
     </h2>
 
+
     <p>
-      In einem kompakten Pilot prüfen wir, was Ihre Daten tatsächlich
-      über die Produktion zeigen — und ob daraus ein wirtschaftlich
-      relevanter Nutzen entsteht.
+      Wir wenden unseren Ansatz auf ein konkretes operatives Problem an
+      und prüfen, was Ihre vorhandenen Daten tatsächlich zeigen.
+      Ohne neues IT-System als Voraussetzung und ohne
+      Produktionsunterbrechung.
     </p>
 
   </div>
@@ -1335,14 +2045,16 @@ PROZESS
       The first step
     </div>
 
+
     <h2>
-      3 weeks. Real data. No production interruption.
+      3 weeks. One real problem. Your real data.
     </h2>
 
+
     <p>
-      In a focused pilot, we test what your data actually reveals
-      about production — and whether it creates meaningful
-      economic value.
+      We apply our approach to one concrete operational problem
+      and examine what your existing data actually shows.
+      No new IT system required and no production interruption.
     </p>
 
   </div>
@@ -1357,22 +2069,24 @@ PROZESS
         01
       </div>
 
+
       <h3 data-de>
-        Daten ansehen
+        Problem verstehen
       </h3>
 
       <h3 data-en class="hidden">
-        Look at the data
+        Understand the problem
       </h3>
 
+
       <p data-de>
-        Wir arbeiten mit den Daten, die bereits vorhanden sind.
-        Kein neues IT-Projekt als Voraussetzung.
+        Wir definieren die konkrete Fragestellung
+        und betrachten die operative Realität.
       </p>
 
       <p data-en class="hidden">
-        We work with the data you already have.
-        No new IT project required as a starting point.
+        We define the concrete question
+        and look at the operational reality.
       </p>
 
     </div>
@@ -1384,22 +2098,25 @@ PROZESS
         02
       </div>
 
+
       <h3 data-de>
-        Verluste finden
+        Ursache und Verlust klären
       </h3>
 
       <h3 data-en class="hidden">
-        Find the losses
+        Clarify cause and loss
       </h3>
 
+
       <p data-de>
-        Wir suchen nach Mustern, Abweichungen und Zusammenhängen,
-        die im normalen Reporting leicht übersehen werden.
+        Wir arbeiten mit Ihren vorhandenen Daten, um sichtbar
+        zu machen, wo der relevante Verlust entsteht und was
+        ihn treibt.
       </p>
 
       <p data-en class="hidden">
-        We look for patterns, deviations and relationships
-        that are easily missed in normal reporting.
+        We work with your existing data to make visible
+        where the relevant loss occurs and what drives it.
       </p>
 
     </div>
@@ -1411,22 +2128,24 @@ PROZESS
         03
       </div>
 
+
       <h3 data-de>
-        Entscheidung treffen
+        Entscheidung vorbereiten
       </h3>
 
       <h3 data-en class="hidden">
-        Make a decision
+        Prepare the decision
       </h3>
 
+
       <p data-de>
-        Am Ende steht nicht nur eine Analyse,
-        sondern ein klarer nächster Schritt.
+        Am Ende steht eine belastbare Entscheidungsgrundlage
+        und ein klar priorisierter nächster Schritt.
       </p>
 
       <p data-en class="hidden">
-        The result is not just an analysis,
-        but a clear next step.
+        The result is an evidence-based decision foundation
+        and one clearly prioritised next action.
       </p>
 
     </div>
@@ -1434,7 +2153,124 @@ PROZESS
 
   </div>
 
+
+  <div class="guarantee" data-de>
+
+    <strong>
+      Kein unnötiges Risiko:
+    </strong>
+
+    Wenn sich kein relevantes Verbesserungspotenzial erkennen lässt,
+    empfehlen wir keinen weiteren Schritt.
+
+  </div>
+
+
+  <div class="guarantee hidden" data-en>
+
+    <strong>
+      No unnecessary risk:
+    </strong>
+
+    If no relevant improvement potential can be identified,
+    we do not recommend a further step.
+
+  </div>
+
+
+  <div class="output-box">
+
+
+    <h3 data-de>
+      Was am Ende klarer ist
+    </h3>
+
+    <h3 data-en class="hidden">
+      What becomes clear
+    </h3>
+
+
+    <ul class="checklist">
+
+
+      <li data-de>
+        Wo ein relevanter Verlust entsteht
+      </li>
+
+      <li data-en class="hidden">
+        Where a relevant loss occurs
+      </li>
+
+
+      <li data-de>
+        Welche Ursache oder Einflussfaktoren relevant sind
+      </li>
+
+      <li data-en class="hidden">
+        Which causes or influencing factors matter
+      </li>
+
+
+      <li data-de>
+        Welche Maßnahme als Nächstes sinnvoll ist
+      </li>
+
+      <li data-en class="hidden">
+        Which action makes sense next
+      </li>
+
+
+    </ul>
+
+  </div>
+
 </div>
+
+</section>
+
+
+<!-- =========================================================
+VISION
+========================================================= -->
+
+<section id="vision">
+
+<div class="container">
+
+  <div class="highlight">
+
+    <div class="kicker" data-de>
+      Ein Anfang, kein Endpunkt
+    </div>
+
+    <div class="kicker hidden" data-en>
+      A beginning, not an endpoint
+    </div>
+
+
+    <p data-de>
+      Der erste Schritt ist eine einmalige, fokussierte Diagnose.
+      Wenn sich der wirtschaftliche Nutzen bestätigt, kann daraus
+      mit der Zeit ein System werden, das dem Management jeden
+      Tag hilft, Prioritäten zu erkennen und schneller zu
+      entscheiden — das ist die Richtung, in die wir uns
+      entwickeln. Heute sprechen wir aber über Ihr konkretes
+      Problem, nicht über ein zukünftiges Produkt.
+    </p>
+
+    <p data-en class="hidden">
+      The first step is a one-off, focused diagnosis. If the
+      economic value is confirmed, it can evolve into a system
+      that helps management see priorities and decide faster,
+      every day — that's the direction we're moving in. Today,
+      though, we're talking about your specific problem, not a
+      future product.
+    </p>
+
+  </div>
+
+</div>
+
 </section>
 
 
@@ -1449,16 +2285,18 @@ FOUNDER
 
   <div class="section-head">
 
+
     <div class="kicker">
       Founder
     </div>
 
+
     <h2 data-de>
-      Produktion zuerst. Technologie als Werkzeug.
+      Operative Erfahrung, bevor Technologie ins Spiel kommt.
     </h2>
 
     <h2 data-en class="hidden">
-      Production first. Technology as a tool.
+      Operational experience before technology comes into play.
     </h2>
 
   </div>
@@ -1479,6 +2317,7 @@ FOUNDER
 
     <div>
 
+
       <h3>
         Tomas Francesco Frongia
       </h3>
@@ -1487,9 +2326,10 @@ FOUNDER
       <p class="bio-text" data-de>
         Interim Plant Director, Lean Six Sigma Black Belt und Gründer
         von AI OpEx. Rund 20 Jahre operative Erfahrung in Deutschland
-        und Italien — darunter die Führung von Produktionsstandorten
+        und Italien — darunter Verantwortung für Produktionsstandorte
         mit voller P&amp;L-Verantwortung.
       </p>
+
 
       <p class="bio-text hidden" data-en>
         Interim Plant Director, Lean Six Sigma Black Belt and founder
@@ -1500,16 +2340,18 @@ FOUNDER
 
 
       <p class="bio-text" data-de>
-        AI OpEx verbindet diese operative Erfahrung mit Datenanalyse
-        und künstlicher Intelligenz. Nicht um mehr Technologie
-        einzuführen, sondern um schneller zu erkennen,
-        was in der Produktion wirklich passiert.
+        AI OpEx entstand aus einer einfachen Beobachtung:
+        In der Produktion fehlen häufig nicht die Daten.
+        Es fehlt die Zeit und Klarheit, aus ihnen schnell genug
+        eine belastbare Entscheidung zu machen.
       </p>
 
+
       <p class="bio-text hidden" data-en>
-        AI OpEx combines this operational experience with data analysis
-        and artificial intelligence. Not to introduce more technology,
-        but to understand faster what is actually happening in production.
+        AI OpEx grew from a simple observation:
+        manufacturing companies often do not lack data.
+        They lack the time and clarity to turn it into
+        a reliable decision quickly enough.
       </p>
 
 
@@ -1540,11 +2382,11 @@ FOUNDER
           </strong>
 
           <span data-de>
-            Echte Werksverantwortung
+            Werksverantwortung
           </span>
 
           <span data-en class="hidden">
-            Real plant responsibility
+            Plant responsibility
           </span>
 
         </div>
@@ -1574,11 +2416,11 @@ FOUNDER
           </strong>
 
           <span data-de>
-            Operative Erfahrung
+            Internationale Erfahrung
           </span>
 
           <span data-en class="hidden">
-            Operational experience
+            International experience
           </span>
 
         </div>
@@ -1591,18 +2433,21 @@ FOUNDER
   </div>
 
 </div>
+
 </section>
 
 
 <!-- =========================================================
-KONTAKT
+CTA
 ========================================================= -->
 
 <section id="kontakt">
 
 <div class="container">
 
+
   <div class="cta">
+
 
     <div class="kicker" data-de>
       Nächster Schritt
@@ -1614,24 +2459,27 @@ KONTAKT
 
 
     <h2 data-de>
-      Finden wir heraus, wo Ihre Produktion Geld verliert.
+      Finden wir heraus,
+      wo Ihre Produktion Geld verliert.
     </h2>
 
     <h2 data-en class="hidden">
-      Let's find out where your production is losing money.
+      Let's find out
+      where your production is losing money.
     </h2>
 
 
     <p data-de>
       In einem kostenlosen 30-Minuten-Gespräch sprechen wir über
-      Ihre Produktion, Ihre aktuellen Daten und die Themen,
-      bei denen Sie heute noch zu spät reagieren.
+      ein konkretes operatives Problem, Ihre vorhandenen Daten
+      und die Frage, ob AI OpEx dabei sinnvoll unterstützen kann.
     </p>
 
+
     <p data-en class="hidden">
-      In a free 30-minute conversation, we discuss your production,
-      your current data and the areas where you may still be
-      reacting too late.
+      In a free 30-minute conversation, we discuss one concrete
+      operational problem, your existing data and whether
+      AI OpEx can provide useful support.
     </p>
 
 
@@ -1642,9 +2490,11 @@ KONTAKT
       info@ai-opex.de
     </a>
 
+
   </div>
 
 </div>
+
 </section>
 
 
@@ -1662,11 +2512,12 @@ FOOTER
 
   <div>
     <strong>AI OpEx</strong>
-    · Operational Intelligence for Manufacturing
+    · Operative Problemlösung für Manufacturing
   </div>
 
 
   <div class="footer-legal">
+
 
     <a href="impressum.html">
 
@@ -1698,6 +2549,7 @@ FOOTER
 
     </a>
 
+
   </div>
 
 
@@ -1717,27 +2569,27 @@ LANGUAGE SCRIPT
 
 <script>
 
-function setLang(lang) {
+function setLang(lang){
 
   document.documentElement.lang = lang;
 
 
-  document.querySelectorAll('[data-de]').forEach(function(el) {
+  document.querySelectorAll('[data-de]').forEach(function(el){
 
-    if (lang === 'de') {
+    if(lang === 'de'){
       el.classList.remove('hidden');
-    } else {
+    }else{
       el.classList.add('hidden');
     }
 
   });
 
 
-  document.querySelectorAll('[data-en]').forEach(function(el) {
+  document.querySelectorAll('[data-en]').forEach(function(el){
 
-    if (lang === 'en') {
+    if(lang === 'en'){
       el.classList.remove('hidden');
-    } else {
+    }else{
       el.classList.add('hidden');
     }
 
@@ -1747,13 +2599,13 @@ function setLang(lang) {
   document
     .getElementById('deBtn')
     .classList
-    .toggle('active', lang === 'de');
+    .toggle('active',lang === 'de');
 
 
   document
     .getElementById('enBtn')
     .classList
-    .toggle('active', lang === 'en');
+    .toggle('active',lang === 'en');
 
 
   localStorage.setItem(
@@ -1778,7 +2630,9 @@ setLang(initialLang);
 
 </script>
 
+
 </body>
 </html>
+
 
 
